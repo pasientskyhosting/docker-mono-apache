@@ -1,8 +1,8 @@
-FROM debian:jessie-slim
+FROM debian:wheezy-slim
 MAINTAINER Joakim Karlsson <jk@patientsky.com>
 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
-    && echo "deb http://download.mono-project.com/repo/debian wheezy/snapshots 4.8.1/main" > /etc/apt/sources.list.d/mono-xamarin.list \
+    && echo "deb http://download.mono-project.com/repo/debian wheezy/snapshots 5.2/main" > /etc/apt/sources.list.d/mono-xamarin.list \
     && echo "deb http://download.mono-project.com/repo/debian wheezy-apache24-compat main" | tee -a /etc/apt/sources.list.d/mono-xamarin.list \
     && echo "deb http://download.mono-project.com/repo/debian wheezy-libjpeg62-compat main" | tee -a /etc/apt/sources.list.d/mono-xamarin.list \
     && apt-get update \
@@ -11,6 +11,12 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
          tzdata \
          binutils \
          ca-certificates-mono \
+         mono-devel \
+         libmono-system-drawing4.0-cil \
+         libmono-system-runtime4.0-cil \
+         libmono-system-windows-forms4.0-cil \
+         libgdiplus \
+         libmono-system-web4.0-cil \
          fsharp \
          mono-vbnc \
          referenceassemblies-pcl \
