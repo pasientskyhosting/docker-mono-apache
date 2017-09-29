@@ -11,12 +11,6 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
          tzdata \
          binutils \
          ca-certificates-mono \
-         mono-devel \
-         libmono-system-drawing4.0-cil \
-         libmono-system-runtime4.0-cil \
-         libmono-system-windows-forms4.0-cil \
-         libgdiplus \
-         libmono-system-web4.0-cil \
          fsharp \
          mono-vbnc \
          referenceassemblies-pcl \
